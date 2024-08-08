@@ -41,6 +41,13 @@
         "essentials/navigation",
         "essentials/reusable-snippets"
       ]
+    },
+    {
+      "group": "Menu3",
+      "pages": [
+        "Menu 3/teste"
+
+      ]
     }
   ],
   "footerSocials": {
