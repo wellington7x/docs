@@ -1,5 +1,4 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
   "name": "teste",
   "logo": {
     "dark": "/logo/dark.svg",
@@ -19,12 +18,6 @@
     {
       "name": "Support",
       "url": "mailto:hi@mintlify.com"
-    }
-  ],
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
     }
   ],
 
