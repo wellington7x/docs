@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Reportana - Documentação",
   "logo": {
-    "dark": "https://www.dropbox.com/scl/fi/nv8qmvh7dg310x3drqwp6/logo-oficial.svg?rlkey=g4aqj8bwdsu5wnzqn3pdo4i9t&st=txms0yzc&dl=0",
-    "light": "https://www.dropbox.com/scl/fi/nv8qmvh7dg310x3drqwp6/logo-oficial.svg?rlkey=g4aqj8bwdsu5wnzqn3pdo4i9t&st=txms0yzc&dl=0"
+    "dark": "https://www.dropbox.com/scl/fi/nv8qmvh7dg310x3drqwp6/logo-oficial.svg",
+    "light": "https://www.dropbox.com/scl/fi/nv8qmvh7dg310x3drqwp6/logo-oficial.svg"
   },
 
 
