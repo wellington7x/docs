@@ -5,7 +5,11 @@
     "dark": "",
     "light": "/logo/light.svg"
   },
+
+
   "favicon": "/favicon.svg",
+
+
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
@@ -15,6 +19,8 @@
       "to": "#07C983"
     }
   },
+
+
   "topbarLinks": [
     {
       "name": "Support",
@@ -22,11 +28,12 @@
     }
   ],
 
+
   "navigation": [
     {
-      "group": "Início",
+      "group": "Nome da linguagem",
       "pages": [
-        "start/teste4"
+        "start/start"
 
       ]
     },
@@ -55,7 +62,7 @@
       ]
     },
     {
-      "group": "essentials",
+      "group": "Essentials",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -66,6 +73,8 @@
       ]
     }
   ],
+
+
   "footerSocials": {
     "x": "https://x.com/mintlify",
     "github": "https://github.com/mintlify",
