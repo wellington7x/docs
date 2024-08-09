@@ -51,14 +51,9 @@
     {
       "group": "Filtros",
       "pages": [
-        "filters/teste2",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "filters/teste2"
       ]
-    }
+    },
     {
       "group": "essentials",
       "pages": [
