@@ -24,44 +24,45 @@
 
   "navigation": [
     {
-      "group": "starta",
+      "group": "Início",
       "pages": [
-        "teste1"
+        "start/teste4"
 
       ]
     },
       {
-      "group": "introduction",
+      "group": "Introdução",
       "pages": [
-        "Como funcionam as variáveis?",
-        "Variáveis para dados do cliente",
-        "Variáveis para dados do negócio",
-        "Variáveis para dados de pedidos",
-        "Variáveis para dados de rastreios",
-        "Variáveis para dados de carrinhos abandonados"
+        "introduction/teste1"
       ]
     },
     {
-      "group": "operators",
+      "group": "Operadores",
       "pages": [
-        "indef."
+        "operators/teste3"
       ]
     },
     {
-      "group": "structures",
+      "group": "Estruturas",
       "pages": [
-        "essentials/markdown",
+        "structures/teste5"
+      ]
+    },
+    {
+      "group": "Filtros",
+      "pages": [
+        "filters/teste2",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
         "essentials/navigation",
         "essentials/reusable-snippets"
       ]
-    },
+    }
     {
-      "group": "filters",
+      "group": "essentials",
       "pages": [
-        "filters/teste2",
+        "essentials/markdown",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
