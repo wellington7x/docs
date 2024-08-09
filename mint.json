@@ -61,7 +61,7 @@
     {
       "group": "filters",
       "pages": [
-        "essentials/markdown",
+        "filters/teste2",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
