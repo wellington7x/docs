@@ -24,14 +24,14 @@
 
   "navigation": [
     {
-      "group": "Início",
+      "group": "starta",
       "pages": [
-        "O que é ***?"
+        "teste1"
 
       ]
     },
       {
-      "group": "Introdução",
+      "group": "introduction",
       "pages": [
         "Como funcionam as variáveis?",
         "Variáveis para dados do cliente",
@@ -42,13 +42,13 @@
       ]
     },
     {
-      "group": "Operadores",
+      "group": "operators",
       "pages": [
         "indef."
       ]
     },
     {
-      "group": "Estruturas",
+      "group": "structures",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -58,6 +58,17 @@
         "essentials/reusable-snippets"
       ]
     },
+    {
+      "group": "filters",
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation",
+        "essentials/reusable-snippets"
+      ]
+    }
   ],
   "footerSocials": {
     "x": "https://x.com/mintlify",
