@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "teste",
+  "name": "Reportana - Documentação",
   "logo": {
     "dark": "",
     "light": "/logo/light.svg"
@@ -24,15 +24,31 @@
 
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "início_0",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "O que é ***?"
+
+      ]
+    },
+      {
+      "group": "introdução_1",
+      "pages": [
+        "Como funcionam as variáveis?",
+        "Variáveis para dados do cliente",
+        "Variáveis para dados do negócio",
+        "Variáveis para dados de pedidos",
+        "Variáveis para dados de rastreios",
+        "Variáveis para dados de carrinhos abandonados"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "operadores_2",
+      "pages": [
+        "indef."
+      ]
+    },
+    {
+      "group": "estruturas_3",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -42,13 +58,6 @@
         "essentials/reusable-snippets"
       ]
     },
-    {
-      "group": "Menu3",
-      "pages": [
-        "Menu 3/teste"
-
-      ]
-    }
   ],
   "footerSocials": {
     "x": "https://x.com/mintlify",
