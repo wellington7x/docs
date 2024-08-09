@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Reportana - Documentação",
   "logo": {
-    "dark": "https://photos.google.com/photo/AF1QipNQrccrgS8HKQycNWlQD8gWlQo5PmPMssEc2uVL",
-    "light": "https://photos.google.com/photo/AF1QipNQrccrgS8HKQycNWlQD8gWlQo5PmPMssEc2uVL"
+    "dark": "https://reportana.com/themes/reportana/assets/img/reportana-white-logo.svg",
+    "light": "https://reportana.com/themes/reportana/assets/img/reportana-white-logo.svg"
   },
 
 
