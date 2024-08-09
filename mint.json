@@ -40,7 +40,12 @@
       {
       "group": "Introdução",
       "pages": [
-        "introduction/teste1"
+        "introduction/funcionamento-var",
+        "introduction/dados-cliente",
+        "introduction/dados-negocio",
+        "introduction/dados-pedidos",
+        "introduction/dados-rastreios",
+        "introduction/dados-carrinhos"
       ]
     },
     {
@@ -52,15 +57,38 @@
     {
       "group": "Estruturas",
       "pages": [
-        "structures/teste5"
+        "structures/for",
+        "structures/if_else",
+        "structures/set",
+        "structures/do",
+        "structures/dump"
       ]
     },
+
+    
     {
       "group": "Filtros",
       "pages": [
-        "filters/teste2"
+        "filters/escape",
+        "filters/date",
+        "filters/date_modify",
+        "filters/default",
+        "filters/format_currency",
+        "filters/number_format",
+        "filters/join",
+        "filters/json_encode",
+        "filters/length",
+        "filters/lower",
+        "filters/map",
+        "filters/raw",
+        "filters/slice",
+        "filters/split",
+        "filters/title",
+        "filters/trim",
+        "filters/upper"
       ]
-    },
+  },
+
     {
       "group": "Essentials",
       "pages": [
