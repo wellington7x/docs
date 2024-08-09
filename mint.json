@@ -24,14 +24,14 @@
 
   "navigation": [
     {
-      "group": "início_0",
+      "group": "Início",
       "pages": [
         "O que é ***?"
 
       ]
     },
       {
-      "group": "introdução_1",
+      "group": "Introdução",
       "pages": [
         "Como funcionam as variáveis?",
         "Variáveis para dados do cliente",
@@ -42,13 +42,13 @@
       ]
     },
     {
-      "group": "operadores_2",
+      "group": "Operadores",
       "pages": [
         "indef."
       ]
     },
     {
-      "group": "estruturas_3",
+      "group": "Estruturas",
       "pages": [
         "essentials/markdown",
         "essentials/code",
