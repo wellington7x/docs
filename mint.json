@@ -2,52 +2,46 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Reportana - Documentação",
   "logo": {
-    "dark": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA3EAAAEyCAYAAABUJ1mnAAAABGdBTUEAALGPC/xhBQAAACBjSFJN",
-    "light": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA3EAAAEyCAYAAABUJ1mnAAAABGdBTUEAALGPC/xhBQAAACBjSFJN"
+    "dark": "/reportana-logo-dark.svg",
+    "light": "/reportana-logo-white.svg"
   },
 
-
-  "favicon": "/favicon.svg",
-
+  "favicon": "/favicon1.svg",
 
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#83E479",
+    "light": "#83E479",
+    "dark": "#83E479",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#83E479",
+      "to": "#2D55F4"
     }
   },
-
 
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Suporte - WhatsApp",
+      "url": "https://api.whatsapp.com/send?phone=5549991504894&text=Ol%C3%A1%2C%20estou%20com%20d%C3%BAvidas%20sobre%20a%20documenta%C3%A7%C3%A3o%20da%20Reportana."
     }
   ],
-
 
   "navigation": [
     {
       "group": "Nome da linguagem",
-      "pages": [
-        "start/start"
-
-      ]
+      "pages": ["start/nome-da-linguagem"]
     },
-      {
+    {
       "group": "Introdução",
       "pages": [
-        "introduction/funcionamento-var",
-        "introduction/dados-cliente",
-        "introduction/dados-negocio",
-        "introduction/dados-pedidos",
-        "introduction/dados-rastreios",
-        "introduction/dados-carrinhos"
+        "introduction/variables",
+        "introduction/client",
+        "introduction/business",
+        "introduction/orders",
+        "introduction/tracking",
+        "introduction/abandoned-carts"
       ]
     },
+
     {
       "group": "Operadores",
       "pages": [
@@ -70,7 +64,6 @@
       ]
     },
 
-    
     {
       "group": "Filtros",
       "pages": [
@@ -92,25 +85,13 @@
         "filters/trim",
         "filters/upper"
       ]
-  },
-
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
     }
   ],
 
-
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "instagram": "https://www.linkedin.com/company/mintsearch"
+    "website": "https://reportana.com",
+    "linkedin": "https://br.linkedin.com/company/reportana",
+    "facebook": "https://www.facebook.com/Reportana/",
+    "instagram": "https://www.instagram.com/reportana/"
   }
 }
