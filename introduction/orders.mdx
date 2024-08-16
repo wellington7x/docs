@@ -5,7 +5,7 @@ description: "*Variáveis disponíveis para imprimir dados de pedidos em mensage
 
 Estão disponíveis para uso somente em mensagens destinadas a pedidos. Para utilizar dados de pedidos em suas mensagens, você _deve categorizar a mensagem_ com o **Tipo PEDIDO**. Ao fazer isso, nosso sistema realizará a leitura dos dados de pedidos e permitirá seu uso adequado.
 
-#### Dados Gerais do Pedido
+**Dados Gerais do Pedido**
 
 | **Nome**                                     | **Variável**                                    | **Saída**                                                                 | **Tipo** |
 | -------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------- | -------- |
@@ -22,7 +22,7 @@ Estão disponíveis para uso somente em mensagens destinadas a pedidos. Para uti
 | Produtos (Formatado)                         | `{{ order.line_items_formatted }}`              | Produto 01 - AB                                                           | Array    |
 | Produtos com Variante (Formatado)            | `{{ order.line_items_formatted_with_variant }}` | Produto 01 - AB - Variante / C                                            | String   |
 
-#### Itens do Pedido (order.line_items) - Array
+**Itens do Pedido | `order.line_items` - Array**
 
 | **Nome**                      | **Variável**                    | **Saída**                      | **Tipo** |
 | ----------------------------- | ------------------------------- | ------------------------------ | -------- |
@@ -33,7 +33,7 @@ Estão disponíveis para uso somente em mensagens destinadas a pedidos. Para uti
 | Preço                         | `{{ line_item.price }}`         | 210.27                         | Number   |
 | URL da Imagem                 | `{{ line_item.image_url }}`     | https://….png                  | String   |
 
-#### Endereço de Entrega Pedidos (order.shipping_address) - Object
+**Endereço de Entrega Pedidos | `order.shipping_address` - Object**
 
 | **Nome**            | **Variável**                            | **Saída**                | **Tipo** |
 | ------------------- | --------------------------------------- | ------------------------ | -------- |

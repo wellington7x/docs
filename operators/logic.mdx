@@ -5,9 +5,9 @@ description: ""
 
 Podemos utilizar operadores lógicos para criar condições mais complexas em nossos templates.
 
-#### Operadores suportados atualmente:
+**Operadores lógicos suportados atualmente:**
 
-**and**: Retorna `true` se ambos os operandos, esquerdo e direito, forem verdadeiros.
+`and`: Retorna `true` se ambos os operandos, esquerdo e direito, forem verdadeiros.
 
 _Exemplo de uso:_
 
@@ -18,7 +18,7 @@ _Exemplo de uso:_
 {% endif %}
 ```
 
-**or:** Retorna `true` se pelo menos um dos operandos, esquerdo ou direito, for verdadeiro.
+`or`: Retorna `true` se pelo menos um dos operandos, esquerdo ou direito, for verdadeiro.
 
 _Exemplo de uso:_
 
@@ -29,7 +29,7 @@ _Exemplo de uso:_
 {% endif %}
 ```
 
-**not:** Nega uma expressão, invertendo seu valor lógico.
+`not`: Nega uma expressão, invertendo seu valor lógico.
 
 _Exemplo de uso:_
 
@@ -40,7 +40,7 @@ _Exemplo de uso:_
 {% endif %}
 ```
 
-**(expr):** Agrupa uma expressão para definir a precedência dos operadores.
+`(expr)`: Agrupa uma expressão para definir a precedência dos operadores.
 
 _Exemplo de uso:_
 
@@ -50,5 +50,3 @@ _Exemplo de uso:_
 {# Retorna true #}
 {% endif %}
 ```
-
-**Nota:** Os operadores são sensíveis a maiúsculas e minúsculas.

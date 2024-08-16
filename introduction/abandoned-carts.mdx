@@ -5,7 +5,7 @@ description: "*Variáveis disponíveis para imprimir dados de carrinhos abandona
 
 Essas variáveis estão disponíveis para uso somente em mensagens destinadas a carrinhos abandonados. Para utilizar dados de carrinhos em suas mensagens, você _deve categorizar a mensagem_ com o **Tipo CARRINHO ABANDONADO**. Ao fazer isso, nosso sistema realizará a leitura dos dados de carrinhos abandonados e permitirá seu uso adequado.
 
-#### Dados Gerais de Carrinhos Abandonados
+**Dados Gerais de Carrinhos Abandonados**
 
 | Nome                                                      | Variável                                                     | Saída                                                                     | Tipo   |
 | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------- | ------ |
@@ -21,7 +21,7 @@ Essas variáveis estão disponíveis para uso somente em mensagens destinadas a 
 | Endereço (Formatado)                                      | `{{ abandoned_checkout.shipping_address_formatted }}`        | Rua Flores, 456 - C - Bairro dos Sonhos, Florianópolis, SC, 06970-000, BR | String |
 | Itens do Carrinho (abandoned_checkout.line_items) - Array | `{{ abandoned_checkout.line_items }}`                        | `[{"title": "Meu Robô"}, ...]`                                            | Array  |
 
-#### Itens do Carrinho (abandoned_checkout.line_items) - Array
+**Itens do Carrinho | `abandoned_checkout.line_items` - Array**
 
 | Nome             | Variável                                             | Saída         | Tipo   |
 | ---------------- | ---------------------------------------------------- | ------------- | ------ |
@@ -31,7 +31,7 @@ Essas variáveis estão disponíveis para uso somente em mensagens destinadas a 
 | Preço            | `{{ abandoned_checkout.line_items.price }}`          | 219.45        | Number |
 | URL da imagem    | `{{ abandoned_checkout.line_items.image_url }}`      | https://….png | String |
 
-#### Endereço de Entrega Carrinhos (order.shipping_address) - Object
+**Endereço de Entrega Carrinhos | `order.shipping_address` - Object**
 
 | Nome              | Variável                                             | Saída                    | Tipo   |
 | ----------------- | ---------------------------------------------------- | ------------------------ | ------ |

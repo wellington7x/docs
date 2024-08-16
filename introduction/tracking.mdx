@@ -5,14 +5,14 @@ description: "*Variáveis disponíveis para imprimir dados de rastreios em mensa
 
 Estão disponíveis para uso somente em mensagens destinadas a pedidos que possuem um número de rastreio atrelado. Utilizado para exibir informações sobre o rastreio do cliente. Lembrando que nesse caso as variáveis irão funcionar somente se houver um pedido criado com um número de rastreio atrelado.
 
-#### Dados Gerais de Rastreio
+**Dados Gerais de Rastreio**
 
 | **Nome**           | **Variável**                       | **Saída**                | **Tipo** |
 | ------------------ | ---------------------------------- | ------------------------ | -------- |
 | Código de rastreio | `{{ tracking_number.code }}`       | NM381645789BR            | String   |
 | Link de rastreio   | `{{ order.tracking_numbers_url }}` | rastreio.pl/pag.rastreio | String   |
 
-#### Eventos de Rastreio (tracking_number.events) - Array
+**Eventos de Rastreio | `tracking_number.events` - Array**
 
 | Nome        | Variável                            | Saída                                           | Tipo   |
 | ----------- | ----------------------------------- | ----------------------------------------------- | ------ |

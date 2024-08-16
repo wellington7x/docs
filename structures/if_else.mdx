@@ -9,12 +9,16 @@ Como _por exemplo_, verificar se a variável `order.total_price` é maior que _1
 
 ```twig
 {% if order.total_price > 150 %}
+
 Valor Atual: {{ order.total_price }}
 Valor Com Desconto: {{ (order.total_price * 0.85)|format_currency(order.currency|default(shop.currency_code)) }}
 _(Desconto de 15% aplicado)_
+
 {% else %}
+
 Valor Atual: {{ order.total_price }}
 Valor Com Desconto: {{ (order.total_price * 0.90)|format_currency(order.currency|default(shop.currency_code)) }}
+
 _(Desconto de 10% aplicado)_
 {% endif %}
 ```
