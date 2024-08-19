@@ -83,7 +83,10 @@
         "filters/split",
         "filters/title",
         "filters/trim",
-        "filters/upper"
+        "filters/upper",
+        "filters/sort",
+        "filters/find_order_by_number",
+        "filters/find_orders_by_email"
       ]
     }
   ],

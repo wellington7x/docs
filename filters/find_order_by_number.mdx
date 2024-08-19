@@ -1,0 +1,27 @@
+---
+title: "find_order_by_number"
+description: ""
+---
+
+### Introdução
+
+### Exemplo de uso
+
+Exemplo de como utilizar o filtro `find_order_by_number`
+
+```twig
+{% set orders = find_order_by_number(number) %}
+
+{% if orders is defined and orders is not empty %}
+  Encontramos pedido associado ao número: {{ number }}.
+{% else %}
+  Não há pedido associado ao número: {{ number }}.
+{% endif %}
+```
+
+### Saída exemplo do código:
+
+<img
+  src="/find_order_by_number.png"
+  alt="Resultado do Filtro `find_order_by_number`"
+/>

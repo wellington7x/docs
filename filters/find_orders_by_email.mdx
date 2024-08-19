@@ -1,0 +1,31 @@
+---
+title: "find_orders_by_email"
+description: ""
+---
+
+### Introdução
+
+O filtro `find_orders_by_email` é um método utilizado para buscar pedidos realizados conforme o e-mail informado pelo cliente. Ele é útil para criar consultas de pedidos em automações de chatbot, por exemplo. Sendo possível exibir informações sobre o pedido. Lembrando que nesse caso, o sistema irá buscar todos os pedidos atrelados ao e-mail informado.
+
+### Exemplo de uso
+
+Exemplo de como utilizar o filtro `find_orders_by_email` para buscar pedidos associados a determinado e-mail:
+
+```twig
+{% set orders = find_orders_by_email(email) %}
+
+{% if orders is defined and orders is not empty %}
+  Foram encontrados pedidos associados ao e-mail: {{ email }}.
+{% else %}
+  Não há pedidos associados ao e-mail: {{ email }}.
+{% endif %}
+```
+
+Nesse exemplo, buscamos os pedidos associados ao e-mail "joao@gmail.com" utilizando `find_orders_by_email`. Como existem pedidos com esse e-mail em nossa loja exemplo, a mensagem “Foram encontrados pedidos associados ao e-mail: joao@gmail.com” é impressa.
+
+### Saída exemplo do código:
+
+<img
+  src="/find_orders_by_email.png"
+  alt="Resultado do Filtro `find_orders_by_email`"
+/>
