@@ -5,12 +5,16 @@ description: ""
 
 ### Introdução
 
+O filtro `raw` permite exibir conteúdo sem escapar os caracteres HTML. Ele é útil quando você precisa renderizar HTML ou outros conteúdos que não devem ser automaticamente convertidos em texto seguro, como quando você precisa exibir tags HTML na saída final.
+
 ### Exemplo de uso
 
-```twig
+Exemplo de como utilizar o filtro `raw` para renderizar HTML diretamente em um template:
 
+```twig
+{% set conteudo = "<p>Este é um <strong>texto em negrito</strong> e um <em>texto em itálico</em>.</p>" %}
+
+{{ conteudo|raw }}
 ```
 
-### Saída exemplo do código
-
-<img src="raw.png" alt="Resultado do Filtro `raw`" />
+Neste exemplo, o filtro `raw` é aplicado à variável conteudo para garantir que as tags HTML sejam renderizadas corretamente na saída final, em vez de serem escapadas.

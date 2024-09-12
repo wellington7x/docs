@@ -5,9 +5,11 @@ description: ""
 
 ### Introdução
 
+O filtro `find_orders_by_email` é um método utilizado para buscar pedidos realizados conforme o número do pedido informado pelo cliente. Ele é útil para criar consultas de pedidos em automações de chatbot, por exemplo. Sendo possível exibir informações sobre o pedido. Lembrando que nesse caso, o sistema irá apenas o pedido associado ao número de pedido informado pelo cliente.
+
 ### Exemplo de uso
 
-Exemplo de como utilizar o filtro `find_order_by_number`
+Exemplo de como utilizar o filtro `find_order_by_number`:
 
 ```twig
 {% set orders = find_order_by_number(number) %}
@@ -18,10 +20,3 @@ Exemplo de como utilizar o filtro `find_order_by_number`
   Não há pedido associado ao número: {{ number }}.
 {% endif %}
 ```
-
-### Saída exemplo do código:
-
-<img
-  src="/find_order_by_number.png"
-  alt="Resultado do Filtro `find_order_by_number`"
-/>

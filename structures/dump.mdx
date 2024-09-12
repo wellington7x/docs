@@ -1,4 +1,23 @@
 ---
 title: "dump"
-description: "Description of your new file."
+description: ""
 ---
+
+### Introdução
+
+O comando `dump` é usado para depurar variáveis, exibindo seus valores e estruturas diretamente na saída. Ele é especialmente útil durante o desenvolvimento, permitindo que você veja o conteúdo de variáveis complexas, arrays, ou objetos, de forma clara e detalhada.
+
+Exemplo de como utilizar o comando `dump` para inspecionar uma variável:
+
+```twig
+{% set pedido = {
+  numero: 12345,
+  cliente: 'João Silva',
+  itens: ['Produto 1', 'Produto 2', 'Produto 3'],
+  valor_total: 299.99
+} %}
+
+{{ dump(pedido) }}
+```
+
+Neste exemplo, o comando `dump` é usado para exibir todos os detalhes da variável pedido, incluindo o número do pedido, o nome do cliente, os itens comprados e o valor total.
