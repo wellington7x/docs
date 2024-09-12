@@ -20,3 +20,5 @@ Exemplo de como utilizar o filtro `find_order_by_number`:
   Não há pedido associado ao número: {{ number }}.
 {% endif %}
 ```
+
+No exemplo acima, usamos o método `find_order_by_number` para procurar um pedido com base no número informado pelo cliente, que está na variável `number`. Se o pedido for encontrado, será exibida a mensagem "Encontramos pedido associado ao número: _Número do pedido informado_". Caso contrário, será exibida a mensagem "Não há pedido associado ao número: _Número do pedido informado_", indicando que não foi possível encontrar um pedido com esse número.
