@@ -14,7 +14,11 @@ Exemplo de como utilizar o filtro `sort` para ordenar um array de números:
 ```twig
 {% set numeros = [5, 3, 9, 1, 4] %}
 
-{{ numeros|sort }}
+{{ numeros|sort|json_encode }}
 ```
 
-Neste exemplo, o filtro `sort` ordena o array `numeros` em ordem crescente. O resultado exibirá os números organizados de forma ascendente.
+Neste exemplo, o filtro `sort` ordena o array `numeros` em ordem crescente. O resultado exibirá os números organizados de forma ascendente. Para facilitar a visualização e envio dos dados no WhatsApp, utilizamos em conjunto `json_encode` para converter o array ordenado em uma string JSON.
+
+### Saída exemplo do código
+
+<img src="/sort.png" alt="Resultado do Filtro `sort`" />

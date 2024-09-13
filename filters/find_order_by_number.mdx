@@ -5,20 +5,32 @@ description: ""
 
 ### Introdução
 
-O filtro `find_orders_by_email` é um método utilizado para buscar pedidos realizados conforme o número do pedido informado pelo cliente. Ele é útil para criar consultas de pedidos em automações de chatbot, por exemplo. Sendo possível exibir informações sobre o pedido. Lembrando que nesse caso, o sistema irá apenas o pedido associado ao número de pedido informado pelo cliente.
+O filtro `find_order_by_number` é um método utilizado para buscar pedidos realizados conforme o número do pedido informado pelo cliente. Ele é útil para criar consultas de pedidos em automações de chatbot, por exemplo. Sendo possível exibir informações sobre o pedido. Lembrando que nesse caso, o sistema irá apenas o pedido associado ao número de pedido informado pelo cliente.
 
 ### Exemplo de uso
 
 Exemplo de como utilizar o filtro `find_order_by_number`:
 
 ```twig
-{% set orders = find_order_by_number(number) %}
+{% set data = find_order_by_number(number) %}
 
-{% if orders is defined and orders is not empty %}
-  Encontramos pedido associado ao número: {{ number }}.
+{% if data is not empty and data.order is not empty %}
+*#{{ data.order.number }}*
+{% if data.order.payment_method == 'BOLETO' %}🏷 _Boleto_{% elseif data.order.payment_method == 'CREDIT_CARD' %}💳 _Cartão de crédito_{% elseif data.order.payment_method == 'PIX' %}🤳🏼 _Pix_{% else %}🏷 _Outro_{% endif %}
+
+{% if data.order.payment_status == 'PAID' %}✅ _Pago_{% elseif data.order.payment_status == 'PENDING' %}⏳ _Pendente_{% else %}❌ _Não pago_{% endif %}
+
+{% if data.order.tracking_numbers_url is not empty %}🚚 {{ data.order.tracking_numbers_url }}{% else %}🚚 _Envio pendente_{% endif %}
 {% else %}
-  Não há pedido associado ao número: {{ number }}.
+Não há pedido associado ao número: {{ number }}.
 {% endif %}
 ```
 
-No exemplo acima, usamos o método `find_order_by_number` para procurar um pedido com base no número informado pelo cliente, que está na variável `number`. Se o pedido for encontrado, será exibida a mensagem "Encontramos pedido associado ao número: _Número do pedido informado_". Caso contrário, será exibida a mensagem "Não há pedido associado ao número: _Número do pedido informado_", indicando que não foi possível encontrar um pedido com esse número.
+### Saída exemplo do código:
+
+<img
+  src="/find_order_by_number.png"
+  alt="Resultado do Filtro `find_orders_by_number`"
+/>
+
+No exemplo acima, usamos o método `find_order_by_number` para procurar um pedido com base no número informado pelo cliente, que está na variável `number`, retornando as informações sobre o pedido.

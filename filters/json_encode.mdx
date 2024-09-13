@@ -12,12 +12,11 @@ O filtro json_encode converte uma variável, como um array ou objeto, em uma str
 Exemplo de como utilizar o filtro `json_encode` para converter um array em uma string JSON:
 
 ```twig
-{% set pedido = {
-  numero: 12345,
-  cliente: 'João Silva',
-  itens: ['Produto 1', 'Produto 2', 'Produto 3'],
-  valor_total: 299.99
-} %}
+{% set pedido = {numero: 12345, cliente: 'João Silva', itens: ['Produto 1', 'Produto 2', 'Produto 3'], valor_total: 299.99} %}
 
 {{ pedido|json_encode }}
 ```
+
+### Saída exemplo do código
+
+<img src="/json_encode.png" alt="Resultado do Filtro `json_encode`" />

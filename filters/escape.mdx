@@ -9,10 +9,10 @@ O filtro `escape` é usado para converter caracteres especiais em uma string par
 
 ### Exemplo de uso
 
-Exemplo de como usar o filtro `escape` para garantir que caracteres especiais em uma string sejam exibidos corretamente:
+Exemplo de como usar o filtro `escape` para garantir que caracteres especiais (tags) em uma string sejam exibidos corretamente:
 
 ```twig
-{{ 'Olá, essa é uma mensagem teste'|escape }}
+{{ '<p>Olá, essa é uma <em>mensagem</em> teste</p>'|escape }}
 ```
 
 ### Saída exemplo do código

@@ -59,8 +59,7 @@
         "structures/for",
         "structures/if_else",
         "structures/set",
-        "structures/do",
-        "structures/dump"
+        "structures/do"
       ]
     },
 

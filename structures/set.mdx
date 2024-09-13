@@ -8,14 +8,14 @@ A propriedade `set` é usada para atribuir um valor a uma variável. Ela permite
 Como _por exemplo_, criar uma variável e definir essa variável para gerar um número de protocolo:
 
 ```twig
-{# Retorna o protocolo: AnoMêsDiaHoraMinutoSegundoMilissegundo #}
-{% set protocol = NOW|date('YmdHisv') %}
+{# Retorna o protocolo: AnoMêsDiaHoraMinutoSegundo #}
+{% set protocol = NOW|date('YmdHis') %}
 
 {# Exibe o resultado #}
 Número do Protocolo: {{ protocol }}
 ```
 
-Nesse exemplo, estamos usando a propriedade `set` para criar uma variável chamada `protocol` e atribuir seu valor. O valor atribuído é gerado pela função `NOW|date` de acordo com o padrão fornecido: "AnoMêsDiaHoraMinutoSegundoMilissegundo". Portanto, a variável `protocol` retornará o número de protocolo composto pelos valores do ano, mês, dia, hora, minuto, segundo e milissegundo.
+Nesse exemplo, estamos usando a propriedade `set` para criar uma variável chamada `protocol` e atribuir seu valor. O valor atribuído é gerado pela função `NOW|date` de acordo com o padrão fornecido: "AnoMêsDiaHoraMinutoSegundo". Portanto, a variável `protocol` retornará o número de protocolo composto pelos valores do ano, mês, dia, hora, minuto e segundo.
 
 **Saída exemplo do código:**
 

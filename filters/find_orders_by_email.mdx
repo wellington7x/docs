@@ -12,16 +12,19 @@ O filtro `find_orders_by_email` é um método utilizado para buscar pedidos real
 Exemplo de como utilizar o filtro `find_orders_by_email` para buscar pedidos associados a determinado e-mail:
 
 ```twig
-{% set orders = find_orders_by_email(email) %}
+{% set data = find_orders_by_email(email) %}
 
-{% if orders is defined and orders is not empty %}
-  Foram encontrados pedidos associados ao e-mail: {{ email }}.
+{% if data is not empty and data.order is not empty %}
+*#{{ data.order.number }}*
+{% if data.order.payment_method == 'BOLETO' %}🏷 _Boleto_{% elseif data.order.payment_method == 'CREDIT_CARD' %}💳 _Cartão de crédito_{% elseif data.order.payment_method == 'PIX' %}🤳🏼 _Pix_{% else %}🏷 _Outro_{% endif %}
+
+{% if data.order.payment_status == 'PAID' %}✅ _Pago_{% elseif data.order.payment_status == 'PENDING' %}⏳ _Pendente_{% else %}❌ _Não pago_{% endif %}
+
+{% if data.order.tracking_numbers_url is not empty %}🚚 {{ data.order.tracking_numbers_url }}{% else %}🚚 _Envio pendente_{% endif %}
 {% else %}
-  Não há pedidos associados ao e-mail: {{ email }}.
+Não há pedidos associados ao e-mail: {{ email }}.
 {% endif %}
 ```
-
-Nesse exemplo, buscamos os pedidos associados ao e-mail "joao@gmail.com" utilizando `find_orders_by_email`. Como existem pedidos com esse e-mail em nossa loja exemplo, a mensagem “Foram encontrados pedidos associados ao e-mail: joao@gmail.com” é impressa.
 
 ### Saída exemplo do código:
 
@@ -29,3 +32,5 @@ Nesse exemplo, buscamos os pedidos associados ao e-mail "joao@gmail.com" utiliza
   src="/find_orders_by_email.png"
   alt="Resultado do Filtro `find_orders_by_email`"
 />
+
+Nesse exemplo, buscamos os pedidos associados ao e-mail "exemplo@email.com" utilizando `find_orders_by_email`. Como existem pedidos com esse e-mail em nossa loja exemplo, a mensagem com as informações sobre o pedido foram impressas.
