@@ -27,8 +27,8 @@
 
   "navigation": [
     {
-      "group": "Nome da linguagem",
-      "pages": ["start/nome-da-linguagem"]
+      "group": "Reportana® Script",
+      "pages": ["start/reportana-script"]
     },
     {
       "group": "Introdução",
@@ -83,9 +83,15 @@
         "filters/title",
         "filters/trim",
         "filters/upper",
-        "filters/sort",
-        "filters/find_order_by_number",
-        "filters/find_orders_by_email"
+        "filters/sort"
+      ]
+    },
+
+    {
+      "group": "Funções",
+      "pages": [
+        "functions/find_order_by_number",
+        "functions/find_orders_by_email"
       ]
     }
   ],
