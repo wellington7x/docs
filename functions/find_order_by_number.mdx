@@ -5,13 +5,13 @@ description: ""
 
 ### Introdução
 
-O filtro `find_order_by_number` é um método utilizado para buscar pedidos realizados conforme o número do pedido informado pelo cliente. Ele é útil para criar consultas de pedidos em automações de chatbot, por exemplo. Sendo possível exibir informações sobre o pedido. Lembrando que nesse caso, o sistema irá apenas o pedido associado ao número de pedido informado pelo cliente.
+O função `find_order_by_number` é utilizada para buscar pedidos realizados conforme o número do pedido informado pelo cliente. Ela é útil para criar consultas de pedidos em automações de chatbot, por exemplo. Sendo possível exibir informações sobre o pedido. Lembrando que nesse caso, o sistema irá buscar apenas o pedido associado ao número de pedido informado pelo cliente.
 
 > **Atenção:** A função `find_order_by_number` funciona exclusivamente por meio do envio de Automações, Campanhas e Campanhas Avançadas.
 
 ### Exemplo de uso
 
-Exemplo de como utilizar o filtro `find_order_by_number`:
+Exemplo de como utilizar a função `find_order_by_number`:
 
 ```twig
 {% set data = find_order_by_number(number) %}
@@ -35,4 +35,4 @@ Não há pedido associado ao número: {{ number }}.
   alt="Resultado do Filtro `find_orders_by_number`"
 />
 
-No exemplo acima, usamos o método `find_order_by_number` para procurar um pedido com base no número informado pelo cliente, que está na variável `number`, retornando as informações sobre o pedido.
+No exemplo acima, usamos a função `find_order_by_number` para procurar um pedido com base no número informado pelo cliente, que está na variável `number`, retornando as informações sobre o pedido.
