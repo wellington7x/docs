@@ -1,0 +1,46 @@
+---
+title: "Como capturar dados"
+description: ""
+---
+
+### Capturando com WhatsApp
+
+Nas automações e campanhas avançadas da Reportana, é possível usar mensagens de WhatsApp para interagir com os clientes e capturar dados importantes. As opções avançadas das mensagens de WhatsApp permitem validar as respostas enviadas pelo clientes e armazená-las em variáveis específicas para uso posterior. Essas variáveis podem ser utilizadas no **Executar JavaScript**, facilitando a criação de lógicas mais complexas. Veja o exemplo abaixo:
+
+<img src="/cap-data2.png" alt="Capturando com interações" />
+<img src="/cap-data3.png" alt="Capturando com interações" />
+<img src="/cap-data4.png" alt="Capturando com interações" />
+
+Neste exemplo, estabelecemos na estrutura da automação uma interação com o cliente para capturar suas respostas, que são armazenadas nas variáveis `payload.altura` e `payload.peso`. Essas variáveis podem ser utilizadas posteriormente para calcular o IMC, conforme o exemplo a seguir:
+
+<img src="/cap-data5.png" alt="Capturando com payload" />
+
+<RequestExample>
+
+```javaScript Código Exemplo
+var altura = payload.altura / 100;
+
+var imc = payload.peso / (altura \* altura);
+
+if (imc < 20) {
+payload.resultado = 'Você esta abaixo do peso!';
+} else if (imc > 20 && imc <= 25) {
+payload.resultado = 'Peso Ideal';
+} else if (imc > 25 && imc <= 30) {
+payload.resultado = 'Sobrepeso';
+} else if (imc > 30 && imc <= 35) {
+payload.resultado = 'Obesidade Moderada';
+} else if (imc > 35 && imc <= 40) {
+payload.resultado = 'Obesidade Severa';
+} else if (imc > 40 && imc <= 50) {
+payload.resultado = 'Obesidade Morbida';
+} else {
+payload.resultado = 'Resultado não definido';
+}
+```
+
+</RequestExample>
+
+Para aprimorar o conhecimento sobre a captura de dados utilizando mensagens de WhatsApp, recomendamos a leitura do nosso artigo disponível na Central de Ajuda: [Entendendo as Ações de Lógico, Tempo, Chat e Avançado das Automações ➾ Ações de Avançado](https://reportana.com/help/article/conhecendo-opcoes-de-acao-tempo-e-logica-de-automacoes#adicionar-à-lista)
+
+### Capturando com Enviar Webhook

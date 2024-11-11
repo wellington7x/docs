@@ -11,11 +11,7 @@
   "colors": {
     "primary": "#83E479",
     "light": "#83E479",
-    "dark": "#83E479",
-    "anchors": {
-      "from": "#83E479",
-      "to": "#2D55F4"
-    }
+    "dark": "#83E479"
   },
 
   "topbarLinks": [
@@ -25,73 +21,114 @@
     }
   ],
 
+  "tabs": [
+    {
+      "name": "Reportana® Script",
+      "url": "reportana-script"
+    },
+    {
+      "name": "Executar Javascript",
+      "url": "executar-javascript"
+    }
+  ],
+
   "navigation": [
     {
       "group": "Reportana® Script",
-      "pages": ["start/reportana-script"]
+      "pages": ["reportana-script/start/reportana-script"]
     },
     {
       "group": "Introdução",
       "pages": [
-        "introduction/variables",
-        "introduction/client",
-        "introduction/business",
-        "introduction/orders",
-        "introduction/tracking",
-        "introduction/abandoned-carts"
+        "reportana-script/introduction/variables",
+        "reportana-script/introduction/client",
+        "reportana-script/introduction/business",
+        "reportana-script/introduction/orders",
+        "reportana-script/introduction/tracking",
+        "reportana-script/introduction/abandoned-carts"
       ]
     },
 
     {
       "group": "Operadores",
       "pages": [
-        "operators/in",
-        "operators/is",
-        "operators/math",
-        "operators/logic",
-        "operators/comparisons",
-        "operators/others"
+        "reportana-script/operators/in",
+        "reportana-script/operators/is",
+        "reportana-script/operators/math",
+        "reportana-script/operators/logic",
+        "reportana-script/operators/comparisons",
+        "reportana-script/operators/others"
       ]
     },
     {
       "group": "Estruturas",
       "pages": [
-        "structures/for",
-        "structures/if_else",
-        "structures/set",
-        "structures/do"
+        "reportana-script/structures/for",
+        "reportana-script/structures/if_else",
+        "reportana-script/structures/set",
+        "reportana-script/structures/do"
       ]
     },
 
     {
       "group": "Filtros",
       "pages": [
-        "filters/escape",
-        "filters/date",
-        "filters/date_modify",
-        "filters/default",
-        "filters/format_currency",
-        "filters/number_format",
-        "filters/join",
-        "filters/json_encode",
-        "filters/length",
-        "filters/lower",
-        "filters/map",
-        "filters/raw",
-        "filters/slice",
-        "filters/split",
-        "filters/title",
-        "filters/trim",
-        "filters/upper",
-        "filters/sort"
+        "reportana-script/filters/escape",
+        "reportana-script/filters/date",
+        "reportana-script/filters/date_modify",
+        "reportana-script/filters/default",
+        "reportana-script/filters/format_currency",
+        "reportana-script/filters/number_format",
+        "reportana-script/filters/join",
+        "reportana-script/filters/json_encode",
+        "reportana-script/filters/length",
+        "reportana-script/filters/lower",
+        "reportana-script/filters/map",
+        "reportana-script/filters/raw",
+        "reportana-script/filters/slice",
+        "reportana-script/filters/split",
+        "reportana-script/filters/title",
+        "reportana-script/filters/trim",
+        "reportana-script/filters/upper",
+        "reportana-script/filters/sort"
       ]
     },
 
     {
       "group": "Funções",
       "pages": [
-        "functions/find_order_by_number",
-        "functions/find_orders_by_email"
+        "reportana-script/functions/find_order_by_number",
+        "reportana-script/functions/find_orders_by_email"
+      ]
+    },
+
+    {
+      "group": "Executar Javascript",
+      "pages": [
+        "executar-javascript/introduction-js/introduction",
+        "executar-javascript/introduction-js/payload",
+        "executar-javascript/introduction-js/data-capture",
+        "executar-javascript/introduction-js/data-use",
+        "executar-javascript/introduction-js/limitations"
+      ]
+    },
+
+    {
+      "group": "Funções",
+      "pages": [
+        "executar-javascript/functions-js/findOrdersByEmail",
+        "executar-javascript/functions-js/findOrdersByPhone",
+        "executar-javascript/functions-js/findOrdersByNumber",
+        "executar-javascript/functions-js/findOrdersByDocument"
+      ]
+    },
+
+    {
+      "group": "Códigos Exemplos",
+      "pages": [
+        "executar-javascript/examples/prazo-de-entrega",
+        "executar-javascript/examples/recomendação-de-tamanhos",
+        "executar-javascript/examples/segmentação-de-produtos"
       ]
     }
   ],
