@@ -5,7 +5,43 @@ description: ""
 
 É importante observar que o **Executar JavaScript** apresenta algumas limitações técnicas que visam garantir a segurança de seu uso e a execução dinâmica dos códigos. Essas restrições asseguram que os scripts sejam processados de maneira eficiente, promovendo a criação de soluções personalizadas sem comprometer a performance global do sistema, abaixo iremos documentar as principais limitações dessa funcionalidade:
 
-1. **Limitação de Requisição HTTP:** Não é possível realizar requisições HTTP (como chamadas a APIs externas) diretamente a partir do **Executar JavaScript**. Esta restrição foi implementada para garantir segurança e controle do ambiente de execução.
+1. **Requisições HTTP:** As requisições HTTP são permitidas através da biblioteca [Axios](https://axios-http.com) ou utilizando `request`, conforme os exemplos demonstrados a seguir:
+
+_Exemplo de requisição HTTP utilizando Axios:_
+
+```JavaScript
+const response = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL');
+payload.dollar = response.data;
+```
+
+_Exemplo de requisição HTTP utilizando request:_
+
+```JavaScript
+const response = await request.get('https://economia.awesomeapi.com.br/last/USD-BRL');
+payload.dollar = response.data;
+```
+
+<RequestExample>
+
+```javascript Exemplo de requisição HTTP utilizando Axios
+const response = await axios.get(
+  "https://economia.awesomeapi.com.br/last/USD-BRL"
+);
+payload.dollar = response.data;
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```javascript Exemplo de requisição HTTP utilizando request
+const response = await request.get(
+  "https://economia.awesomeapi.com.br/last/USD-BRL"
+);
+payload.dollar = response.data;
+```
+
+</ResponseExample>
 
 2. **Memória Máxima de 128MB:** O **Executar JavaScript** possui um limite máximo de memória disponível de 128MB. Esse controle garante que os processos sejam eficientes, evitando sobrecarga do sistema.
 

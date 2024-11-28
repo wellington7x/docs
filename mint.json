@@ -27,7 +27,7 @@
       "url": "reportana-script"
     },
     {
-      "name": "Executar Javascript",
+      "name": "Executar JavaScript",
       "url": "executar-javascript"
     }
   ],
@@ -103,7 +103,7 @@
     },
 
     {
-      "group": "Executar Javascript",
+      "group": "Executar JavaScript",
       "pages": [
         "executar-javascript/introduction-js/introduction",
         "executar-javascript/introduction-js/payload",
@@ -119,7 +119,8 @@
         "executar-javascript/functions-js/findOrdersByEmail",
         "executar-javascript/functions-js/findOrdersByPhone",
         "executar-javascript/functions-js/findOrdersByNumber",
-        "executar-javascript/functions-js/findOrdersByDocument"
+        "executar-javascript/functions-js/findOrdersByDocument",
+        "executar-javascript/functions-js/findOrdersByTrackingNumber"
       ]
     },
 

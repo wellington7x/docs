@@ -9,7 +9,7 @@ Em automações e campanhas avançadas da Reportana, temos acesso à variável g
 var totalPrice = payload.order.total_price
 ```
 
-Nesse exemplo, salvamos o valor total do pedido na variável `totalPrice`, acessando o array `orders` e o dado `total_price` (valor total do pedido). Dessa forma, conseguimos executar, por exemplo, um cálculo para aplicar automaticamente um cupom de desconto ao valor total do pedido:
+Nesse exemplo, salvamos o valor total do pedido na variável `totalPrice`, acessando o objeto `payload.order` e o atributo `total_price` (valor total do pedido). Dessa forma, conseguimos executar, por exemplo, um cálculo para calcular automaticamente um cupom de desconto ao valor total do pedido:
 
 <img src="/cap-data1.png" alt="Capturando com payload" />
 

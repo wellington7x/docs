@@ -29,7 +29,7 @@ A função `findOrdersByPhone` permite localizar pedidos associados ao cliente p
      alt="Resultado do Filtro `findOrdersByPhone`"
    />
 
-3. No **Executar JavaScript** utilizamos o código `payload.orders = await findOrdersByPhone(payload.phone)` para buscar pedidos associados ao número de telefone informado pelo cliente. Dessa forma, o número de telefone salvo na variável `payload.phone` é utilizado pela função `findOrdersByPhone` para buscar pedidos associados ao número de telefone, o resultado é armazenado em payload.orders, em forma de array contendo os pedidos.
+3. No **Executar JavaScript** utilizamos o código `payload.orders = await findOrdersByPhone(payload.phone)` para buscar pedidos associados ao número de telefone informado pelo cliente. Dessa forma, o número de telefone salvo na variável `payload.phone` é utilizado pela função `findOrdersByPhone` para buscar pedidos associados ao número de telefone, o resultado é armazenado em `payload.orders`, em forma de array contendo os pedidos.
 
 <img
   src="/findOrdersByPhone-img4.png"
@@ -70,7 +70,7 @@ Nenhum pedido encontrado.
 
 </Accordion>
 
-**Observação:** No código exemplo, caso não seja encontrado nenhum pedido associado ao e-mail informado, a mensagem _"Nenhum pedido encontrado será exibida"_.
+**Observação:** No código exemplo, caso não seja encontrado nenhum pedido associado ao número de telefone informado, a mensagem _"Nenhum pedido encontrado será exibida"_.
 
 Para estruturar a mensagem de resposta contendo os dados do pedido nesse exemplo, utilizamos a linguagem de template **Reportana® Script**, que permite o uso das estruturas `for` e `if/else`. Esses comandos possibilitam a formatação detalhada e condicional das informações exibidas. Para aprofundar o conhecimento sobre o uso da **Reportana® Script** e explorar mais exemplos, consulte a documentação completa: [Reportana® Script - Documentação](https://reportana.mintlify.app/start/reportana-script).
 
@@ -188,4 +188,4 @@ A busca retorna diversas informações detalhadas sobre os pedidos, incluindo:
 - **Informações de Pagamento:** URL do boleto, linha digitável do boleto, data de vencimento, Pix cópia e cola, valor total do pedido, etc;
 - **URLs Úteis:** Link para rastreamento do pedido e qualquer outras URLs relevantes.
 
-Esses dados permitem compor mensagens personalizadas para informar o cliente sobre os detalhes dos pedidos associados ao e-mail informado na busca.
+Esses dados permitem compor mensagens personalizadas para informar o cliente sobre os detalhes dos pedidos associados ao número de telefone informado na busca.

@@ -44,7 +44,7 @@ payload.resultado = 'Resultado não definido';
 <ResponseExample>
 
 ```javascript Código Exemplo 2
-var valorAssinatura = payload.response_json.usuarios.valorAssinatura;
+var valorAssinatura = payload.response_json.usuarios[0].valorAssinatura;
 
 // Calculando o valor com desconto de 15%
 var valorComDesconto = valorAssinatura - valorAssinatura * 0.15;
@@ -60,7 +60,7 @@ Para aprimorar o conhecimento sobre a captura de dados utilizando mensagens de W
 
 Em automações e campanhas avançadas, é possível também utilizar a funcionalidade de **Enviar Webhook** para receber e capturar dados de outros sistemas. Esses dados podem ser integrados às automações, permitindo que, juntamente com o uso do **Executar JavaScript**, as automações sejam personalizadas criando experiências dinâmicas durante a interação com o cliente.
 
-1. Para configurar a captura de dados através do **Enviar Webhook**, primeiramente você pode definir a URL de um sistema externo e escolher o método de solicitação (GET).
+1. Para configurar a captura de dados através do **Enviar Webhook**, primeiramente você pode definir a URL de um sistema externo e escolher o método de solicitação desejado.
 
 <img src="/webhook1.png" alt="EExemplo Enviar Webhook: imagem 1" />
 
@@ -94,7 +94,7 @@ Em automações e campanhas avançadas, é possível também utilizar a funciona
 
 <img src="/webhook3.png" alt="Exemplo Enviar Webhook: imagem 3" />
 
-**Observação:** No código, acessamos especificamente a propriedade `payload.response_json.usuarios.valorAssinatura` que corresponde ao valor atual da assinatura.
+**Observação:** No código, acessamos especificamente a propriedade `payload.response_json.usuarios[0].valorAssinatura` que corresponde ao valor atual da assinatura.
 
 5. Por fim, utilizamos o resultado do código salvo na variável `payload.desconto` na mensagem de WhatsApp que iremos enviar ao cliente.
 

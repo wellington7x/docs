@@ -5,11 +5,11 @@ description: ""
 
 ## Introdução
 
-A função `findOrdersByDocument` permite localizar pedidos associados ao cliente por meio do CPF ou CNPJ informado. Quando executada no bloco **Executar JavaScript**, ela verifica a existência de pedidos no sistema e, se encontrados, retorna como resposta um array com detalhes completos sobre os pedidos associados ao documento em questão, incluindo informações do cliente, itens adquiridos e status de pagamento.
+A função `findOrdersByDocument` permite localizar pedidos associados ao cliente por meio do documento do cliente, como por exemplo CPF e CNPJ. Quando executada no bloco **Executar JavaScript**, ela verifica a existência de pedidos no sistema e, se encontrados, retorna como resposta um array com detalhes completos sobre os pedidos associados ao documento em questão, incluindo informações do cliente, itens adquiridos e status de pagamento.
 
 ## Como utilizar
 
-1. Primeiramente será necessário utilizar as configurações avançadas das nossas mensagens de WhatsApp para solicitar ao cliente o documento, salvando a resposta informada pelo cliente em uma variável, que nesse caso será `payload.documento`.
+1. Primeiramente será necessário utilizar as configurações avançadas das nossas mensagens de WhatsApp para solicitar ao cliente o documento, salvando a resposta informada pelo cliente em uma variável, que nesse caso será `payload.document`.
 
    <img
      src="/findOrdersByDocument-img1.png"
@@ -71,7 +71,7 @@ Nenhum pedido encontrado.
 
 </Accordion>
 
-**Observação:** No código exemplo, caso não seja encontrado nenhum pedido associado ao e-mail informado, a mensagem _"Nenhum pedido encontrado será exibida"_.
+**Observação:** No código exemplo, caso não seja encontrado nenhum pedido associado ao documento informado, a mensagem _"Nenhum pedido encontrado será exibida"_.
 
 Para estruturar a mensagem de resposta contendo os dados do pedido nesse exemplo, utilizamos a linguagem de template **Reportana® Script**, que permite o uso das estruturas `for` e `if/else`. Esses comandos possibilitam a formatação detalhada e condicional das informações exibidas. Para aprofundar o conhecimento sobre o uso da **Reportana® Script** e explorar mais exemplos, consulte a documentação completa: [Reportana® Script - Documentação](https://reportana.mintlify.app/start/reportana-script).
 
@@ -189,4 +189,4 @@ A busca retorna diversas informações detalhadas sobre os pedidos, incluindo:
 - **Informações de Pagamento:** URL do boleto, linha digitável do boleto, data de vencimento, Pix cópia e cola, valor total do pedido, etc;
 - **URLs Úteis:** Link para rastreamento do pedido e qualquer outras URLs relevantes.
 
-Esses dados permitem compor mensagens personalizadas para informar o cliente sobre os detalhes dos pedidos associados ao e-mail informado na busca.
+Esses dados permitem compor mensagens personalizadas para informar o cliente sobre os detalhes dos pedidos associados ao documento informado na busca.

@@ -1,50 +1,50 @@
 ---
-title: "findOrdersByNumber"
+title: "findOrdersByTrackingNumber"
 description: ""
 ---
 
 ## Introdução
 
-A função `findOrdersByNumber` permite localizar um pedido específico através do número do pedido. Quando executada no bloco **Executar JavaScript**, ela verifica a existência do pedido com base no número do pedido informado pelo cliente e, se encontrado, retorna como resposta um array com detalhes completos sobre o pedido em questão.
+A função `findOrdersByTrackingNumber` permite localizar pedidos associados ao número de rastreio informado. Quando executada no bloco **Executar JavaScript**, ela verifica a existência de pedidos no sistema e, se encontrados, retorna como resposta um array com detalhes completos sobre os pedidos associados ao número de rastreio, incluindo informações do cliente, informações de rastreio, itens adquiridos e status de pagamento.
 
 ## Como utilizar
 
-1. Primeiramente será necessário utilizar as configurações avançadas das nossas mensagens de WhatsApp para solicitar ao cliente o número do pedido, salvando a resposta informada pelo cliente em uma variável, que nesse caso será `payload.number`.
+1. Primeiramente será necessário utilizar as configurações avançadas das nossas mensagens de WhatsApp para solicitar ao cliente o número de rastreio, salvando a resposta informada pelo cliente em uma variável, que nesse caso será `payload.tracking`.
 
    <img
-     src="/findOrdersByNumber-img1.png"
-     alt="Resultado do Filtro `findOrdersByNumber`"
+     src="/findOrdersByTrackingNumber-img1.png"
+     alt="Resultado do Filtro `findOrdersByTrackingNumber`"
    />
    <img
-     src="/findOrdersByNumber-img2.png"
-     alt="Resultado do Filtro `findOrdersByNumber`"
+     src="/findOrdersByTrackingNumber-img2.png"
+     alt="Resultado do Filtro `findOrdersByTrackingNumber`"
    />
 
-**Observação:** Para conhecer mais sobre as configurações avançadas das nossas mensagens de WhatsApp, acesse nosso artigo na central de ajuda: [Central de Ajuda - Entendendo as Ações de Lógico, Tempo, Chat e Avançado das Automações.](https://reportana.com/help/article/conhecendo-opcoes-de-acao-tempo-e-logica-de-automacoes)
+**Observação:** Para conhecer mais sobre as configurações avançadas das nossas mensagens de WhatsApp, acesse nosso artigo na central de ajuda: [Entendendo as Ações de Lógico, Tempo, Chat e Avançado das Automações ➾ Ações de Avançado](https://reportana.com/help/article/conhecendo-opcoes-de-acao-tempo-e-logica-de-automacoes#adicionar-à-lista)
 
-2. Em seguida, assim que o cliente informar o número do pedido, na estrutura da automação, utilizaremos o bloco **Executar JavaScript** para executar a função `findOrdersByNumber` e realizar a busca do pedido associado ao número do pedido informado.
+2. Em seguida, assim que o cliente informar o número de rastreio, na estrutura da automação, utilizaremos o bloco **Executar JavaScript** para executar a função `findOrdersByTrackingNumber` e realizar a busca dos pedidos associados ao número de rastreio informado.
 
    <img
-     src="/findOrdersByNumber-img3.png"
-     alt="Resultado do Filtro `findOrdersByNumber`"
+     src="/findOrdersByTrackingNumber-img3.png"
+     alt="Resultado do Filtro `findOrdersByTrackingNumber`"
    />
 
-3. No **Executar JavaScript** utilizamos o código `payload.orders = await findOrdersByNumber(payload.number)` para buscar o pedido associado ao número do informado pelo cliente. Dessa forma, o número do pedido salvo na variável `payload.number` é utilizado pela função `findOrdersByNumber` para buscar o pedido associado a esse número de pedido, o resultado é armazenado em payload.orders, em forma de array contendo o pedido em questão.
-
-<img
-  src="/findOrdersByNumber-img4.png"
-  alt="Resultado do Filtro `findOrdersByNumber`"
-/>
-
-4. A resposta da busca poderá retornar, nas próximas mensagens, informações sobre o pedido encontrado.
+3. No **Executar JavaScript** utilizamos o código `payload.orders = await findOrdersByTrackingNumber(payload.tracking)` para buscar pedidos associados ao número de rastreio informado pelo cliente. Dessa forma, número de rastreio salvo na variável `payload.tracking` é utilizado pela função `findOrdersByTrackingNumber` para buscar pedidos associados ao número de rastreio, o resultado é armazenado em `payload.orders`, em forma de array contendo os pedidos.
 
    <img
-     src="/findOrdersByNumber-img5.png"
-     alt="Resultado do Filtro `findOrdersByNumber`"
+     src="/findOrdersByTrackingNumber-img4.png"
+     alt="Resultado do Filtro `findOrdersByTrackingNumber`"
+   />
+
+4. A resposta da busca poderá retornar, nas próximas mensagens, informações sobre os pedidos encontrados.
+
+   <img
+     src="/findOrdersByTrackingNumber-img5.png"
+     alt="Resultado do Filtro `findOrdersByTrackingNumber`"
    />
    <img
      src="/findOrdersByEmail-img6.png"
-     alt="Resultado do Filtro `findOrdersByNumber`"
+     alt="Resultado do Filtro `findOrdersByTrackingNumber`"
    />
 
 <Accordion title="Código utilizado no exemplo">
@@ -70,11 +70,11 @@ Nenhum pedido encontrado.
 
 </Accordion>
 
-**Observação:** No código exemplo, caso não seja encontrado nenhum pedido associado ao número do pedido informado, a mensagem _"Nenhum pedido encontrado será exibida"_.
+**Observação:** No código exemplo, caso não seja encontrado nenhum pedido associado ao número de rastreio informado, a mensagem _"Nenhum pedido encontrado será exibida"_.
 
 Para estruturar a mensagem de resposta contendo os dados do pedido nesse exemplo, utilizamos a linguagem de template **Reportana® Script**, que permite o uso das estruturas `for` e `if/else`. Esses comandos possibilitam a formatação detalhada e condicional das informações exibidas. Para aprofundar o conhecimento sobre o uso da **Reportana® Script** e explorar mais exemplos, consulte a documentação completa: [Reportana® Script - Documentação](https://reportana.mintlify.app/start/reportana-script).
 
-## Retorno da função `findOrdersByNumber`
+## Retorno da função `findOrdersByTrackingNumber`
 
 ```twig
 {
@@ -188,4 +188,4 @@ A busca retorna diversas informações detalhadas sobre os pedidos, incluindo:
 - **Informações de Pagamento:** URL do boleto, linha digitável do boleto, data de vencimento, Pix cópia e cola, valor total do pedido, etc;
 - **URLs Úteis:** Link para rastreamento do pedido e qualquer outras URLs relevantes.
 
-Esses dados permitem compor mensagens personalizadas para informar o cliente sobre os detalhes dos pedidos associado ao número do pedido informado na busca.
+Esses dados permitem compor mensagens personalizadas para informar o cliente sobre os detalhes do pedido associado ao número de rastreio informado na busca.
