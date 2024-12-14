@@ -92,7 +92,8 @@ Para estruturar a mensagem de resposta contendo os dados do pedido nesse exemplo
       "shop": {
         "id": 1234,
         "name": "Loja Teste",
-        "currency_code": "BRL"
+        "currency_code": "BRL",
+        "billing_address_formatted": "Rua Florianópolis 123, Centro, São José, MG, 36490-008, BR"
       },
       "customer": {
         "id": 104657184,
@@ -171,7 +172,38 @@ Para estruturar a mensagem de resposta contendo os dados do pedido nesse exemplo
         "line_items_formatted": "Meu Robô",
         "line_items_formatted_with_variant": "Meu Robô - Azul",
         "tracking_numbers_formatted": "1234ABCD",
-        "tracking_numbers_url": "https://boleto.pl/1234ABCD"
+        "tracking_numbers_url": "https://boleto.pl/1234ABCD",
+        "tracking_numbers": [
+          {
+            "code": "NL0000000000BR",
+            "new_code": "NL0000000123BR",
+            "full_status": "DELIVERED",
+            "elapsed_time": 30,
+            "tax_at": "2024-11-30 11:46:45",
+            "delivered_at": "2024-12-14 11:46:45",
+            "returning_to_sender_at": "2024-11-30 11:46:45",
+            "returned_to_sender_at": "2024-11-30 11:46:45",
+            "first_update_at": "2024-11-14 11:46:45",
+            "last_update_at": "2024-12-14 11:46:45",
+            "last_request_at": "2024-12-14 11:46:45",
+            "events": [
+              {
+                "type": "CORREIOS",
+                "date": "2024-12-14 11:46:45",
+                "label": "Entregue",
+                "location": "São Paulo - SP",
+                "description": "Sua encomenda foi entregue"
+              },
+              {
+                "type": "CORREIOS",
+                "date": "2024-11-14 11:46:45",
+                "label": "Postado",
+                "location": "São Paulo - SP",
+                "description": "Aceito pela transportadora"
+              }
+            ]
+          }
+        ]
       }
     }
   ]
