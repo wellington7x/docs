@@ -1,0 +1,157 @@
+---
+title: "Exemplos de requisições"
+description: ""
+---
+
+Nesse tópico, iremos demonstrar alguns exemplos de requisições que podem ser feitos através do Executar JavaScript para API externas, sendo ViaCEP, Receitaws, Trello e Eleven Labs.
+
+### Exemplo utilizando a API da ViaCEP
+
+Neste exemplo fazer utilizar a requisição para a API da ViaCEP para realizar a confirmação de endereço através do CEP.
+
+1. Primeiramente, será necessário utilizar o gatilho de Conversa Criada (WhatsApp) em uma automação e validar resposta para salvarmos o valor do CEP informado na variável `payload.cep`.
+
+   <img src="/cep1.png" alt="Resultado da requisição `ViaCEP`" />
+   <img src="/cep2.png" alt="Resultado da requisição `ViaCEP`" />
+
+2. Assim que o CEP é informado, nosso sistema salva automaticamente o valor recebido (número do CEP) na variável `payload.cep`.
+
+3. Em seguida, utilizamos o Executar JavaScript para realizar a requisição para a API do ViaCEP e buscar o endereço referente ao mesmo, conforme o código abaixo:
+
+<img src="/cep3.png" alt="Resultado da requisição `ViaCEP`" />
+<img src="/cep4.png" alt="Resultado da requisição `ViaCEP`" />
+
+<Accordion title="Código utilizado no exemplo">
+
+```JavaScript
+
+var cep = payload.cep;
+
+const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+
+    if (response.status === 200 && !response.data.erro) {
+        // Salvando os dados da API
+        payload.endereco = response.data.logradouro || "Endereço não encontrado"
+        payload.bairro = response.data.bairro || "Bairro não disponível"
+        payload.localidade = response.data.localidade || "Localidade não disponível"
+        payload.uf = response.data.uf || "UF não disponível"
+    }
+
+```
+
+</Accordion>
+
+4. Caso a requisição falhe ou o código esteja incorreto, podemos utilizar o Executar JavaScript para tratar o erro criando uma mensagem informativa e com opções para reiniciar a consulta.
+
+<img src="/cep5.png" alt="Resultado da requisição `ViaCEP`" />
+
+5. Caso a requisição seja feita com sucesso, a mensagem de confirmação com o endereço referente ao CEP será enviada. Também utilizamos nessa mensagem opções de botões para direcionar a conversa a um atendente ou finalizar o processo de confirmação.
+
+<img src="/cep6.png" alt="Resultado da requisição `ViaCEP`" />
+<img src="/cep7.png" alt="Resultado da requisição `ViaCEP`" />
+
+**Observações:**
+
+1. Para conhecer mais sobre as configurações avançadas das nossas mensagens de WhatsApp, acesse nosso artigo na central de ajuda: Entendendo as Ações de Lógico, Tempo, Chat e Avançado das Automações ➾ Ações de Avançado
+
+2. Para conhecer mais sobre a estruturação de mensagens de WhatsApp, automações e utilização de botões, acesse nossos tutoriais:
+
+   - Automações: https://reportana.com/help/category/automations
+   - WhatsApp Marketing: https://reportana.com/help/category/whatsapp-marketing
+   - Mensagens com botões: https://reportana.com/help/article/como-criar-mensagens-de-whatsapp-com-botoes
+
+3. Para conferir a API do ViaCEP, acesse a documentação oficial: https://viacep.com.br
+
+### Exemplo utilizando a API da Receitaws
+
+1. Conforme o primeiro exemplo, utilizamos o gatilho de Conversa Criada (WhatsApp) para iniciar a automação e salvamos o número do CNPJ informado na variável `payload.cnpj`.
+
+<img src="/cnpj1.png" alt="Resultado da requisição `Reiceitaws`" />
+<img src="/cnpj2.png" alt="Resultado da requisição `Reiceitaws`" />
+
+2. Em seguida, realizamos a requisição para a API da Receitaws utilizando o Executar JavaScript, conforme o código abaixo:
+
+<img src="/cnpj3.png" alt="Resultado da requisição `Reiceitaws`" />
+
+<Accordion title="Código utilizado no exemplo">
+
+```javascript
+var cnpj = payload.cnpj;
+
+const response = await axios.get(`https://receitaws.com.br/v1/cnpj/${cnpj}`);
+
+if (response.status === 200 && !response.data.erro) {
+  payload.razaoSocial = response.data.nome || "Razão Social não disponível";
+  payload.nomeFantasia = response.data.fantasia || "Nome Fantasia não disponível";
+  payload.situacao = response.data.situacao || "Situação não disponível";
+  payload.dataAbertura = response.data.abertura || "Data de abertura não disponível";
+  payload.telefone = response.data.telefone || "Telefone não disponível";
+  payload.email = response.data.email || "E-mail não disponível";
+}
+```
+
+</Accordion>
+
+3. Seguindo a mesma lógica do primeiro exemplo, em nossa estrutura de automação, caso a requisição falhe, daremos a opção de consultar novamente ou sair.
+
+<img src="/cnpj4.png" alt="Resultado da requisição `Reiceitaws`" />
+
+4. Caso a requisição seja feita com sucesso, os dados referentes ao CNPJ serão informados conforme a mensagem abaixo, com opções de botões para realizar uma nova consulta ou sair.
+
+<img src="/cnpj5.png" alt="Resultado da requisição `Reiceitaws`" />
+<img src="/cnpj6.png" alt="Resultado da requisição `Reiceitaws`" />
+
+### Exemplo utilizando a API do Trello
+
+1. Neste exemplo, utilizamos o gatilho "Pedido Criado" em conjunto com a condição Produto(s) → Contém → "Produto Exclusivo". Isso significa que, sempre que um novo pedido for criado e incluir um produto exclusivo, a automação será acionada para criar automaticamente um novo cartão no Trello. Essa integração é realizada utilizando a API oficial do Trello.
+
+<img src="/trello1.png" alt="Resultado da requisição `API Trello`" />
+<img src="/trello2.png" alt="Resultado da requisição `API Trello`" />
+
+2. Em seguida, caso o pedido criado contenha o “Produto Exclusivo”, acionaremos no Executar JavaScript a requisição para a API Trello, conforme o código baixo:
+
+<img src="/trello3.png" alt="Resultado da requisição `API Trello`" />
+
+<Accordion title="Código utilizado no exemplo">
+
+```javascript
+const API_KEY = "KEY";
+const TOKEN = "API Token";
+
+// ID da lista onde o cartão será criado
+const LIST_ID = "LIST_ID";
+
+// Dados do pedido
+const name = order.customer_name;
+const phone = order.customer_phone;
+const number = order.number;
+
+// Dados do novo cartão
+const cardData = {
+  name: `Novo pedido de ${name}`,
+  desc: `Descrição do cartão:
+    - Número do Pedido: ${number}
+    - Contato no WhatsApp: https://wa.me/${phone}`,
+  idList: LIST_ID,
+  pos: "top",
+};
+
+const response = await axios.post(
+  `https://api.trello.com/1/cards?idList=${LIST_ID}&key=${API_KEY}&token=${TOKEN}`,
+  cardData
+);
+
+if (response.status === 200) {
+  payload.res = "Novo pedido criado com sucesso!";
+}
+```
+
+</Accordion>
+
+Neste código, capturamos os dados de nome, telefone e número do pedido, para na criação do cartão, especificar esses dados, conforme as diretrizes de uso da API do Trello. Além disso, para uso da API Oficial do Trello, será necessário obter a chave de API, API Token e o ID da lista desejada. Para conferir mais instruções de uso da API, recomendamos acessar a documentação Oficial do Trello: https://developer.atlassian.com
+
+3. Assim que o cartão é criado com sucesso, na estrutura da nossa automação, configuramos para uma mensagem informativa ser enviada ao nosso próprio número de WhatsApp, utilizando a opção de mensagem “Enviar para outro telefone”. O mesmo ocorre caso a requisição falhe.
+
+<img src="/trello4.png" alt="Resultado da requisição `API Trello`" />
+
+**Observação:** Podemos também configurar mensagens informativas para avisos ao cliente.

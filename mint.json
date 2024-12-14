@@ -109,7 +109,8 @@
         "executar-javascript/introduction-js/payload",
         "executar-javascript/introduction-js/data-capture",
         "executar-javascript/introduction-js/data-use",
-        "executar-javascript/introduction-js/limitations"
+        "executar-javascript/introduction-js/limitations",
+        "executar-javascript/introduction-js/request-examples"
       ]
     },
 
