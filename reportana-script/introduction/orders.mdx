@@ -43,3 +43,27 @@ Estão disponíveis para uso somente em mensagens destinadas a pedidos. Para uti
 | Estado              | `{{ order.shipping_address.province }}` | Santa Catarina           | String   |
 | Endereço 1          | `{{ order.shipping_address.address1 }}` | Rua Flores 456, Apto 31  | String   |
 | Endereço 2          | `{{ order.shipping_address.address2 }}` | Centro                   | String   |
+
+**Dados de Rastreio | `order.tracking_numbers` - Array**
+
+| **Nome**                    | **Variável**                                | **Saída**                     | **Tipo**    |
+| --------------------------- | ------------------------------------------- | ----------------------------- | ----------- |
+| Código de rastreio          | `{{ order.tracking_numbers.code }}`         | NL0000000000BR                | String      |
+| Novo código de rastreio     | `{{ order.tracking_numbers.new_code }}`     | NL0000000123BR                | String      |
+| Status completo             | `{{ order.tracking_numbers.full_status }}`  | ENTREGUE                     | String      |
+| Tempo decorrido (em dias)   | `{{ order.tracking_numbers.elapsed_time }}` | 30                            | Number      |
+| Taxação em                  | `{{ order.tracking_numbers.tax_at }}`       | 2024-11-30 11:46:45           | String    |
+| Entregue em                 | `{{ order.tracking_numbers.delivered_at }}` | 2024-12-14 11:46:45           | String    |
+| Em devolução desde          | `{{ order.tracking_numbers.returning_to_sender_at }}` | 2024-11-30 11:46:45  | String    |
+| Devolvido ao remetente em   | `{{ order.tracking_numbers.returned_to_sender_at }}` | 2024-11-30 11:46:45 | String    |
+| Primeiro status atualizado  | `{{ order.tracking_numbers.first_update_at }}` | 2024-11-14 11:46:45    | String    |
+| Última atualização          | `{{ order.tracking_numbers.last_update_at }}` | 2024-12-14 11:46:45     | String    |
+| Última requisição           | `{{ order.tracking_numbers.last_request_at }}` | 2024-12-14 11:46:45     | String    |
+| Eventos                     | `{{ order.tracking_numbers.events }}`       | Array com eventos             | Array       |
+| **Eventos de Rastreios `Events`** | `order.tracking_numbers.events` - Array
+|                     |                                                 |                               |             |
+| Tipo do evento      | `{{ order.tracking_numbers.events.type }}`      | CORREIOS                      | String      |
+| Data do evento      | `{{ order.tracking_numbers.events.date }}`      | 2024-12-14 11:46:45           | String    |
+| Rótulo do evento    | `{{ order.tracking_numbers.events.label }}`     | Entregue                      | String      |
+| Local do evento     | `{{ order.tracking_numbers.events.location }}`  | São Paulo - SP                | String      |
+| Descrição do evento | `{{ order.tracking_numbers.events.description }}` | Sua encomenda foi entregue | String      |
