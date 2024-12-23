@@ -109,8 +109,7 @@
         "executar-javascript/introduction-js/payload",
         "executar-javascript/introduction-js/data-capture",
         "executar-javascript/introduction-js/data-use",
-        "executar-javascript/introduction-js/limitations",
-        "executar-javascript/introduction-js/resquest-examples"
+        "executar-javascript/introduction-js/limitations"
       ]
     },
 
@@ -130,7 +129,10 @@
       "pages": [
         "executar-javascript/examples/prazo-de-entrega",
         "executar-javascript/examples/recomendação-de-tamanhos",
-        "executar-javascript/examples/segmentação-de-produtos"
+        "executar-javascript/examples/segmentação-de-produtos",
+        "executar-javascript/examples/api-viacep",
+        "executar-javascript/examples/api-receitaws",
+        "executar-javascript/examples/api-trello"
       ]
     }
   ],
